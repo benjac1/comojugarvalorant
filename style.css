@@ -389,6 +389,8 @@ body{
 }
 
 .aviso{
+    background:var(--ng-c);
+    border-radius:17px;
     color:var(--rjo-c);
     -webkit-text-stroke: 2px var(--bc-c);
     position:fixed;
