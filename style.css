@@ -18,7 +18,7 @@ body{
     margin:0;
     background-size:cover;
     width:100%;
-    height:100vh;
+    height:100%;
     background-position:50%;
     background-attachment:fixed;
 }
@@ -125,7 +125,7 @@ body{
     height:max-content;
     & h2{
         font-weight:500;
-        font-family:"Black Ops One", sans-serif;;
+        font-family:"Black Ops One", sans-serif;
         user-select:none;
         text-align:Center;
         font-size:10rem;
@@ -225,9 +225,9 @@ body{
     background:lch(20 145 25);
     border-bottom:2px solid lch(0 0 0);
     border-top:2px solid lch(0 0 0);
+    width:100%;
 }
 .ul__div{
-    flex:50%;
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -276,7 +276,7 @@ body{
     }
 }
 .header__responsive{
-    z-index: 10000;
+    z-index:10000;
     display:none;
     position:fixed;
     top:0;
@@ -287,11 +287,12 @@ body{
     align-items:center;
 }
 .nav__responsive{
+    padding:30px;
     display:flex;
     width:100%;
     height:100%;
     align-items:center;
-    justify-content:flex-end;
+    justify-content:end;
 }
 .label__toggle{
     z-index:10000000;
@@ -306,21 +307,11 @@ body{
     display:flex;
     gap:10px;
     flex-direction:column;
-    &:hover > div:nth-child(1){
-        transform:translateY(8px) rotate(40deg);
-    }
-    &:hover > div:nth-child(2){
-        display:none;
-    }
-    &:hover > div:nth-child(3){
-        transform:translateY(-8px) rotate(140deg);
-    }
-    & .linea__responsive{
+    & div{
         border-radius:7px;
         height:6px;
         width:50px;
         background:var(--ng-c);
-        transition:transform 0.5s;
     }
 }
 .responsive__checkbox{
@@ -331,7 +322,7 @@ body{
 }
 .ulmenu__responsive{
     position:absolute;
-    width:100vw;
+    width:100%;
     background:var(--rjo-c);
     height:100vh;
     display:none;
@@ -393,14 +384,53 @@ body{
 }
 @media (max-width:788px){
     .div__caratula h2{
-        font-size:1rem
+        font-size:1rem;
     }
 }
 
 .aviso{
+    color:var(--rjo-c);
     -webkit-text-stroke: 2px var(--bc-c);
     position:fixed;
     font-size:4rem;
     right:0;
     bottom:0;
+}
+
+.h1boost{
+    font-family:"Black Ops One", sans-serif;
+    font-size:10rem;
+    color:var(--vd-c);
+    -webkit-text-stroke:1px var(--bc-c);
+}
+.articleboost{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+@media (max-width:1365px){
+    .h1boost{
+        font-size:7rem;
+    }
+}
+@media (max-width:1165px){
+    .h1boost{
+        font-size:6rem;
+    }
+}
+@media (max-width:965px){
+    .h1boost{
+        font-size:5rem;
+    }
+}
+@media (max-width:765px){
+    .h1boost{
+        font-size:4rem;
+    }
+}
+@media (max-width:565px){
+    .h1boost{
+        font-size:2.5rem;
+    }
 }
