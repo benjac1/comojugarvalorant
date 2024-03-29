@@ -22,13 +22,8 @@ body{
     background-position:50%;
     background-attachment:fixed;
 }
-.h2__seccion{
-    margin:0;
-    font-weight:1000;
-    font-size:2.3rem;
-    color:lch(100% 90 100);
-    user-select:none;
-    text-align:center;
+.main{
+    padding:10px;
 }
 .parrafos{
     font-size:1.7rem;
@@ -94,30 +89,31 @@ body{
         border-bottom:4px solid lch(30% 100 30);
         border-radius:17px;
         object-fit:content;
-        width:10%;
+        width:50%;
         height:400px;
     }
     & .imgd{
-        transform:translateY(17px) translateX(-17px);
+        transform:translateY(17px);
     }
     & .imgi{
-        transform:translateY(17px) translateX(17px);
+        transform:translateY(17px);
     }
     & div{
         display:flex;
         flex-direction:column;
         justify-content:center;
         text-wrap:pretty;
-        padding:60px;
+        padding:10px;
         width:90%;
         & h2{
+            font-size:3rem;
             color:var(--amrl-c);
         }
     }
 }
 .div__caratula{
     border-bottom:2px solid lch(70% 145 30);
-    padding:20px;
+    padding:60px;
     margin:70px 0;
     background:url(caratula1.jpg);
     background-size:;
@@ -161,7 +157,6 @@ body{
     }
     & div p{
         color:lch(100% 70 30);
-        padding:0 300px;
         font-size:1.3rem;
         text-wrap:balance;
         text-align:center;
@@ -193,7 +188,7 @@ body{
     animation:animateindicesombra infinite ease-in-out 1s;
 }
 .container__indice{
-    flex:50%;
+    width:50%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -237,8 +232,9 @@ body{
     list-style:none;
 }
 .div__seccion{
-    font-family: "Protest Riot", sans-serif;
+    font-family:"Protest Riot", sans-serif;
     display:flex;
+    padding:10px;
 }
 .a__liindice{
     text-wrap:nowrap;
@@ -403,6 +399,7 @@ body{
     font-size:10rem;
     color:var(--vd-c);
     -webkit-text-stroke:1px var(--bc-c);
+    user-select:none;
 }
 .articleboost{
     height:100vh;
