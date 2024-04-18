@@ -4,6 +4,7 @@
     --vd-c:rgba(0,205,0,1);
     --amrl-c:rgba(205,205,0,1);
     --bc-c:rgba(255,255,255,1);
+    --g-c:rgba(155,155,155,1);
     --ng-c:rgba(0,0,0,1);
     --ngt-c:rgba(0,0,0,.5);
 }
@@ -54,7 +55,7 @@ body{
     transition:transform 0.5s ease, text-shadow 0.5s ease;
     font-size:1.2rem;
     font-weight: 1000;
-    color:lch(100% 70 30);
+    color:var(--bc-c);
     text-decoration: none;
 }
 .li__ul{
@@ -83,10 +84,10 @@ body{
     display:flex;
     justify-content:space-between;
     border-bottom:2px solid var(--rj-c);
-    border-top:2px solid lch(60% 100 30);
+    border-top:2px solid var(--rj-c);
     background:var(--ngt-c);
     & img{
-        border-bottom:4px solid lch(30% 100 30);
+        border-bottom:4px solid var(--rj-c);
         border-radius:17px;
         object-fit:content;
         width:50%;
@@ -112,26 +113,26 @@ body{
     }
 }
 .div__caratula{
-    border-bottom:2px solid lch(70% 145 30);
+    border-bottom:2px solid var(--rj-c);
     padding:60px;
     margin:70px 0;
     background:url(caratula1.jpg);
-    background-size:;
     background-position:center;
-    height:max-content;
+    height:100%;
     & h2{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
         user-select:none;
         text-align:Center;
         font-size:10rem;
-        background:url(radiante.png);
+        background:url(radiant.png);
+        background-size:auto;
         -webkit-text-stroke:2px;
         -webkit-text-fill-color:transparent;
         -webkit-background-clip:text;
     }
     & p{
-        -webkit-text-stroke:1px lch(0 0 0);
+        -webkit-text-stroke:1px var(--ng-c);
         color:var(--bc-c);
         font-size:2rem;
         text-align:center;
@@ -144,19 +145,19 @@ body{
     }
 }
 .seccioncon{
-    box-shadow:0 0 70px lch(30 0 0);
+    box-shadow:0 0 70px var(--g-c);
     padding:37px;
     margin:70px 0;
-    background:lch(1% 105 30);
+    background:var(--rjo-c);
     & div h2{
         user-select:none;
-        color:lch(100% 0 0);
+        color:var(--bc-c);
         font-size:2rem;
         text-align:center;
         margin:0;
     }
     & div p{
-        color:lch(100% 70 30);
+        color:var(--bc-c);
         font-size:1.3rem;
         text-wrap:balance;
         text-align:center;
@@ -165,8 +166,8 @@ body{
 .footer{
     width:100%;
     height:100px;
-    background:lch(0 0 0);
-    color:lch(100% 0 0);
+    background:var(--ng-c);
+    color:var(--bc-c);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -188,7 +189,7 @@ body{
     animation:animateindicesombra infinite ease-in-out 1s;
 }
 .container__indice{
-    width:50%;
+    width:40%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -217,24 +218,29 @@ body{
     }
 }
 .seccionind{
-    background:lch(20 145 25);
-    border-bottom:2px solid lch(0 0 0);
-    border-top:2px solid lch(0 0 0);
+    background:var(--rj-c);
+    border-bottom:2px solid var(--ng-c);
+    border-top:2px solid var(--ng-c);
     width:100%;
 }
 .ul__div{
+    width:40%;
     display:flex;
-    flex-direction:column;
     gap:10px;
+    flex-wrap:wrap;
 }
 .li__ulindice{
-    display:flex;
+    flex:1 1px 5rem;
     list-style:none;
 }
 .div__seccion{
     font-family:"Protest Riot", sans-serif;
     display:flex;
     padding:10px;
+    justify-content:space-evenly;
+    gap:100px;
+    height:100%;
+    width:100%;
 }
 .a__liindice{
     text-wrap:nowrap;
@@ -244,7 +250,6 @@ body{
     padding:4px;
     text-decoration:none;
     color:var(--bc-c);
-    width:min-content;
     &:hover{
         transform:translatex(4px);
         color:var(--ng-c);
@@ -283,7 +288,6 @@ body{
     align-items:center;
 }
 .nav__responsive{
-    padding:30px;
     display:flex;
     width:100%;
     height:100%;
@@ -291,14 +295,18 @@ body{
     justify-content:end;
 }
 .label__toggle{
-    z-index:10000000;
-    width:50px;
-    height:38px;
+    border-radius:4px;
+    z-index:1000;
+    padding:4px;
+    width:58px;
+    height:46px;
+    position:relative;
+    right:30px;
     background:var(--rj-c);
 }
 .menu__responsive{
-    width:50px;
-    height:50px;
+    width:max-content;
+    height:max-content;
     cursor:pointer;
     display:flex;
     gap:10px;
@@ -324,8 +332,8 @@ body{
     display:none;
     align-items:center;
     justify-content:center;
-    top:-1000px;
-    transition: top 1s;
+    top:-1200px;
+    transition: top 0.5s;
     & .divcenter__responsive{
         display:flex;
         flex-direction:column;
@@ -352,38 +360,6 @@ body{
 }
 
 
-@media (max-width:390px){
-    .div__caratula{
-        & h2{
-            font-size:4.2rem;
-        }
-        & h1{
-            text-align:left;
-            font-size:1.7rem;
-        }
-        & p{
-            font-size:0.7rem;
-        }
-    }
-}
-@media (max-width:768px){
-    .header{
-        display:none;
-    }
-    .header__responsive{
-        display:block;
-        width:100%;
-    }
-    .ulmenu__responsive{
-        display:flex;
-    }
-}
-@media (max-width:788px){
-    .div__caratula h2{
-        font-size:1rem;
-    }
-}
-
 .aviso{
     background:var(--bc-c);
     border-radius:17px;
@@ -407,6 +383,13 @@ body{
     justify-content:center;
     align-items:center;
 }
+
+
+
+/* problemas media width radiant e imagenes */
+
+
+
 @media (max-width:1365px){
     .h1boost{
         font-size:7rem;
@@ -416,19 +399,101 @@ body{
     .h1boost{
         font-size:6rem;
     }
+    .div__seccion{
+        gap:0;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .container__indice{
+        width:100%;
+    }
+    .ul__div{
+        width:100%;
+        text-wrap:wrap;
+        align-items:center;
+        & .a__liindice:hover{
+            transform:translateX(0);
+        }
+    }
+    .header{
+        display:none;
+    }
+    .header__responsive{
+        display:block;
+        width:100%;
+    }
+    .ulmenu__responsive{
+        display:flex;
+    }
+    .secimgizq{
+        flex-direction:column-reverse;
+    }
+    .secimgder{
+        flex-direction:column;
+    }
+    .seccion img{
+        width:80%;
+    }
+    div section{
+        align-items:center;
+    }
 }
 @media (max-width:965px){
     .h1boost{
         font-size:5rem;
+    }
+    .div__caratula h2{
+        font-size:8rem;
+    }
+    .div__caratula p{
+        font-size:1.7rem;
+    }
+    .seccion p{
+        font-size:1.7rem;
+    }
+    .div__caratula h1{
+        font-size:2.5rem;
     }
 }
 @media (max-width:765px){
     .h1boost{
         font-size:4rem;
     }
+    .div__caratula h2{
+        font-size:6rem;
+    }
+    .div__caratula p{
+        font-size:1.4rem;
+    }
+    .div__caratula h1{
+        font-size:2rem;
+    }
 }
-@media (max-width:565px){
+@media (max-width:595px){
     .h1boost{
         font-size:2.5rem;
+    }
+    .div__caratula h2{
+        font-size:4rem;
+    }
+    .div__caratula p{
+        font-size:1.1rem;
+    }
+    .div__caratula h1{
+        font-size:1.5rem;
+    }
+}
+@media (max-width:395px){
+    .h1boost{
+        font-size:2.5rem;
+    }
+    .div__caratula h2{
+        font-size:3rem;
+    }
+    .div__caratula p{
+        font-size:1.1rem;
+    }
+    .div__caratula h1{
+        font-size:1.5rem;
     }
 }
