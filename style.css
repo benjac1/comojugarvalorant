@@ -332,7 +332,7 @@ body{
     display:none;
     align-items:center;
     justify-content:center;
-    top:-1700px;
+    top:-2300px;
     transition: top 0.5s;
     & .divcenter__responsive{
         display:flex;
