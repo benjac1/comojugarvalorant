@@ -123,7 +123,7 @@ body{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
         user-select:none;
-        text-align:Center;
+        text-align:center;
         font-size:10rem;
         background:url(radiant.png);
         background-size:auto;
@@ -224,10 +224,11 @@ body{
     width:100%;
 }
 .ul__div{
+    flex-direction:column;
     width:40%;
     display:flex;
     gap:10px;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     justify-content:center;
 }
 .li__ulindice{
@@ -251,7 +252,7 @@ body{
     text-decoration:none;
     color:var(--bc-c);
     &:hover{
-        transform:translatex(4px);
+        transform:translateX(4px);
         color:var(--ng-c);
         background:var(--vd-c);
     }
@@ -386,10 +387,6 @@ body{
 
 
 
-/* problemas media width radiant e imagenes */
-
-
-
 @media (max-width:1365px){
     .h1boost{
         font-size:7rem;
@@ -411,7 +408,8 @@ body{
     }
     .ul__div{
         width:100%;
-        text-wrap:wrap;
+        flex-wrap:wrap;
+        flex-direction:row;
         align-items:center;
         & .a__liindice:hover{
             transform:translateX(0);
@@ -438,6 +436,9 @@ body{
     }
     div section{
         align-items:center;
+    }
+    .a__liindice{
+        font-size:2.2rem;
     }
 
 }
@@ -466,9 +467,13 @@ body{
         font-size:6rem;
     }
     .div__caratula p{
+        font-size:2rem;
     }
     .div__caratula h1{
         font-size:3rem;
+    }
+    .seccion div h2{
+        font-size:3.5rem;
     }
 }
 @media (max-width:595px){
