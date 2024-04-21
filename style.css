@@ -115,7 +115,7 @@ body{
 .div__caratula{
     border-bottom:2px solid var(--rj-c);
     padding:60px;
-    margin:180px 0;
+    margin:70px 0;
     background:url(caratula1.jpg);
     background-position:center;
     height:100%;
@@ -396,6 +396,8 @@ body{
     }
 }
 @media (max-width:1165px){
+    .div__caratula{
+        margin:200px 0;}
     .h1boost{
         font-size:6rem;
     }
@@ -447,13 +449,13 @@ body{
         font-size:8rem;
     }
     .div__caratula p{
-        font-size:1.7rem;
+        font-size:2rem;
     }
     .seccion p{
-        font-size:1.7rem;
+        font-size:2rem;
     }
     .div__caratula h1{
-        font-size:2.5rem;
+        font-size:2.9rem;
     }
 }
 @media (max-width:765px){
@@ -464,10 +466,10 @@ body{
         font-size:6rem;
     }
     .div__caratula p{
-        font-size:1.4rem;
+        font-size:2rem;
     }
     .div__caratula h1{
-        font-size:2rem;
+        font-size:3rem;
     }
 }
 @media (max-width:595px){
