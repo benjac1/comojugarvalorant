@@ -471,16 +471,22 @@ body{
         font-size:4rem;
     }
     .div__caratula h2{
-        font-size:6rem;
+        font-size:8rem;
     }
     .div__caratula p{
-        font-size:2rem;
+        font-size:3rem;
     }
     .div__caratula h1{
         font-size:3rem;
     }
     .seccion div h2{
         font-size:3.5rem;
+    }
+    .indice{
+        font-size:17rem;
+    }
+    .sombraindice{
+        font-size:17rem;
     }
 }
 @media (max-width:595px){
