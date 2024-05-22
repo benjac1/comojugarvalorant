@@ -103,14 +103,16 @@ body{
         display:flex;
         flex-direction:column;
         justify-content:center;
-        text-wrap:pretty;
+        text-align:center;
         padding:10px;
-        width:90%;
         & h2{
             font-size:3rem;
             color:var(--amrl-c);
         }
     }
+}
+.divsection{
+    width:90%;
 }
 .div__caratula{
     border-bottom:2px solid var(--rj-c);
