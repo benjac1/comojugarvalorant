@@ -115,9 +115,9 @@ body{
 .div__caratula{
     border-bottom:2px solid var(--rj-c);
     padding:60px;
-    margin:70px 0;
     background:url(caratula1.jpg);
     background-position:center;
+    background-repeat:no-repeat;
     height:100%;
     & h2{
         font-weight:500;
@@ -395,7 +395,8 @@ body{
 }
 @media (max-width:1165px){
     .div__caratula{
-        margin:200px 0;}
+        margin:150px 0;
+    }
     .h1boost{
         font-size:6rem;
     }
