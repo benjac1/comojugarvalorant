@@ -7,19 +7,39 @@
     --g-c:rgba(155,155,155,1);
     --ng-c:rgba(0,0,0,1);
     --ngt-c:rgba(0,0,0,.5);
+    --azl-c:rgba(0,0,205,1);
 }
 *{
-    margin:0;
-    padding:0;
+    margin:0;padding:0;
     box-sizing:border-box;
+}
+html{
+    scroll-timeline:--page-scroll block;
+}
+.progressBar{
+    z-index:10000000;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:7px;
+    background:var(--vd-c);
+    animation:grow-progressBar auto linear;
+    animation-timeline:--page-scroll;
+    transform-origin:0 50%;
+}
+@keyframes grow-progressBar{
+    from{
+        transform:scaleX(0);
+    }
+    to{
+        transform:scaleX(1);
+    }
 }
 body{
     background:url(fondo.jpg);
     font-family:sans-serif;
     margin:0;
     background-size:cover;
-    width:100%;
-    height:100%;
+    width:100%;height:100%;
     background-position:50%;
     background-attachment:fixed;
 }
@@ -32,11 +52,9 @@ body{
 }
 .header{
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:center;align-items:center;
     z-index:1000000;
-    width:100%;
-    height:70px;
+    width:100%;height:70px;
     background:var(--rj-c);
     position:fixed;
     top:0;
@@ -45,8 +63,7 @@ body{
     width:100%;
 }
 .ul__nav{
-    padding:0;
-    margin:0;
+    margin:0;padding:0;
     display:flex;
     justify-content:space-evenly;
 }
@@ -87,11 +104,15 @@ body{
     border-top:2px solid var(--rj-c);
     background:var(--ngt-c);
     & img{
+        view-timeline-name:--reveal-img;
+        view-timeline-axis:block;
+        animation:revealimg linear both;
+        animation-timeline:--reveal-img;
+        animation-range:cover 0% cover 50%;
         border-bottom:4px solid var(--rj-c);
         border-radius:17px;
         object-fit:content;
-        width:50%;
-        height:400px;
+        width:50%;height:400px;
     }
     & .imgd{
         transform:translateY(17px);
@@ -105,23 +126,49 @@ body{
         justify-content:center;
         text-align:center;
         padding:10px;
+        animation:revealtxt both;
+        animation-timeline:view();
+        animation-range:cover 0% cover 50%;
         & h2{
             font-size:3rem;
             color:var(--amrl-c);
         }
     }
 }
+@keyframes revealimg{
+    from{
+        opacity:0;
+        clip-path:inset(0% 70% 0% 70%);
+    }
+    to{
+        opacity:1;
+        clip-path:inset(0% 0% 0% 0%);
+    }
+}
+@keyframes revealtxt{
+    from{
+        transform:translateY(-200px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
 .divsection{
     width:90%;
 }
 .div__caratula{
-    margin:70px 0 0 0;
-    border-bottom:2px solid var(--rj-c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
     padding:60px;
     background:url(caratula1.jpg);
     background-position:center;
     background-repeat:no-repeat;
-    height:100%;
+    height:100vh;
+    animation:reveal 1.7s -0.7s linear;
     & h2{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
@@ -145,6 +192,24 @@ body{
         user-select:none;
         font-size:3rem;
         text-align:center;
+    }
+}
+@keyframes reveal{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes parallax{
+    from{
+        background-position:50% 0;
+        height:100vh;
+    }
+    to{
+        background-position:50% 100%;
+        height:10vh;
     }
 }
 .seccioncon{
@@ -246,6 +311,11 @@ body{
     gap:100px;
     height:100%;
     width:100%;
+    animation:reveal lineal both;
+    animation-timeline:--reveal;
+    animation-range:cover -10% cover 50%;
+    view-timeline-axis:block;
+    view-timeline-name:--reveal;
 }
 .a__liindice{
     text-wrap:nowrap;
