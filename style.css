@@ -37,10 +37,10 @@ html{
 body{
     background:url(fondo.jpg);
     font-family:sans-serif;
-    margin:0;
+    margin:70px 0 0 0;
     background-size:cover;
     width:100%;height:100%;
-    background-position:50%;
+    background-position:center;
     background-attachment:fixed;
 }
 .main{
@@ -58,6 +58,7 @@ body{
     background:var(--rj-c);
     position:fixed;
     top:0;
+    animation:reveal 1s -0.3s both;
 }
 .nav__header{
     width:100%;
@@ -167,8 +168,8 @@ body{
     background:url(caratula1.jpg);
     background-position:center;
     background-repeat:no-repeat;
-    height:100vh;
-    animation:reveal 1.7s -0.7s linear;
+    height:100%;
+    animation:reveal 1.7s linear;
     & h2{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
@@ -200,16 +201,6 @@ body{
     }
     to{
         opacity:1;
-    }
-}
-@keyframes parallax{
-    from{
-        background-position:50% 0;
-        height:100vh;
-    }
-    to{
-        background-position:50% 100%;
-        height:10vh;
     }
 }
 .seccioncon{
@@ -311,11 +302,21 @@ body{
     gap:100px;
     height:100%;
     width:100%;
-    animation:reveal lineal both;
+    animation:revealind both;
     animation-timeline:--reveal;
-    animation-range:cover -10% cover 50%;
+    animation-range:cover 0% cover 70%;
     view-timeline-axis:block;
     view-timeline-name:--reveal;
+}
+@keyframes revealind{
+    from{
+        opacity:0;
+        transform:translateX(-200px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
 }
 .a__liindice{
     text-wrap:nowrap;
@@ -361,6 +362,7 @@ body{
     height:150px;
     justify-content:end;
     align-items:center;
+    animation:reveal 0.7s -0.3s linear;
 }
 .nav__responsive{
     display:flex;
