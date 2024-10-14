@@ -105,7 +105,7 @@ body{
         view-timeline-axis:block;
         animation:revealimg linear both;
         animation-timeline:--reveal-img;
-        animation-range:cover 0% cover 50%;
+        animation-range:cover 30% cover 50%;
         border-bottom:4px solid var(--rj-c);
         border-radius:17px;
         object-fit:content;
@@ -118,9 +118,6 @@ body{
         justify-content:center;
         text-align:center;
         padding:10px;
-        animation:revealtxt both;
-        animation-timeline:view();
-        animation-range:cover 0% cover 50%;
         & h2{
             font-size:clamp(.9rem,2dvw,3rem);
             color:var(--amrl-c);
@@ -230,7 +227,7 @@ body{
 }
 .indice, .sombraindice{
     margin:0;
-    font-size:clamp(2rem,4dvw,7rem);
+    font-size:clamp(3rem,4dvw,7rem);
     user-select:none;
 }
 .indice{
@@ -278,11 +275,6 @@ body{
     position:sticky;
     top:110px;
 }
-.publi{
-    width:100%;
-    background:var(--rj-c);
-    height:80dvh;
-}
 .seccionind{
     background:var(--rj-c);
     border-bottom:2px solid var(--ng-c);
@@ -308,10 +300,10 @@ body{
     height:100%;
     width:100%;
     animation:revealind both;
+    animation-range:cover 0% cover 10%;
     animation-timeline:--reveal;
-    animation-range:cover 0% cover 70%;
-    view-timeline-axis:block;
-    view-timeline-name:--reveal;
+    animation-timeline:scroll();
+    view-timeline-axis:--reveal;
 }
 @keyframes revealind{
     from{
@@ -326,7 +318,7 @@ body{
 .a__liindice{
     text-wrap:nowrap;
     font-family: "Protest Riot", sans-serif;
-    font-size:clamp(.9rem,2dvw,1.7rem);
+    font-size:clamp(1.2rem,2dvw,1.7rem);
     background:var(--rjo-c);
     padding:4px;
     text-decoration:none;
@@ -348,7 +340,7 @@ body{
     border-radius:100%;
     animation:animateindice infinite 1.5s;
     & a img{
-        width:100px;
+        width:clamp(70px,10dvw,100px);
     }
     & a{
         display:flex;
@@ -446,7 +438,7 @@ body{
     border-radius:17px;
     color:var(--rj-c);
     position:fixed;
-    font-size:4rem;
+    font-size:clamp(.9rem,5dvw,4rem);
     right:0;
     bottom:0;
 }
@@ -464,6 +456,26 @@ body{
     justify-content:center;
     align-items:center;
 }
+.aside-indice input[type="checkbox"]{
+    display:none;
+}
+.aside-indice label{
+    user-select:none;
+    font-size:4rem;
+    background:var(--rj-c);
+    border-radius:50%;
+    border:4px solid var(--ng-c);
+    transition:rotate .5s;
+}
+.thingsofindicesidebar{
+    display:none;
+}
+.aside-indice:has(input[type="checkbox"]:checked){
+    left:0px;
+}
+.aside-indice:has(input[type="checkbox"]:checked) label{
+    rotate:180deg;
+}
 
 
 
@@ -471,8 +483,25 @@ body{
     .div__caratula{
         margin-top:150px;
     }
+    .thingsofindicesidebar{
+        display:block;
+    }
+    .seccionind{
+        padding:20px;
+    }
     .aside-indice{
-        top:190px;
+        transition:left .5s;
+        display:flex;
+        top:150px;
+        position:fixed;
+        left:-440px;
+        z-index:1000;
+        align-items:center;
+        gap:1dvw;
+    }
+    .div__seccion{
+        animation-timeline:none;
+        width:400px;
     }
     .header{
         display:none;
