@@ -491,7 +491,7 @@ body{
         max-width:100%;
     }
     .a__liindice{
-        font-size:clamp(4rem,6rem,8rem);
+        font-size:clamp(2rem,4rem,6rem);
     }
     .thingsofindicesidebar{
         display:block;
