@@ -119,11 +119,11 @@ body{
         text-align:center;
         padding:10px;
         & h2{
-            font-size:clamp(1.3rem,2.5dvw,5rem);
+            font-size:clamp(1.3rem,2rem,5rem);
             color:var(--amrl-c);
         }
         & p{
-            font-size:clamp(1.2rem,2dvw,4rem);
+            font-size:clamp(1.2rem,2rem,4rem);
         }
     }
 }
@@ -224,6 +224,7 @@ body{
 }
 .main-wrapper{
     display:flex;
+    max-width:80%;
 }
 .indice, .sombraindice{
     margin:0;
@@ -318,7 +319,7 @@ body{
 .a__liindice{
     text-wrap:nowrap;
     font-family: "Protest Riot", sans-serif;
-    font-size:clamp(1.6rem,6dvw,2.1rem);
+    font-size:clamp(1.6rem,2rem,2.1rem);
     background:var(--rjo-c);
     padding:4px;
     text-decoration:none;
@@ -332,15 +333,15 @@ body{
 .scrolltop{
     user-select:none;
     position:fixed;
-    left:5px;
-    bottom:10px;
+    right:5px;
+    bottom:12dvh;
     background:var(--bc-c);
     width:max-content;
     padding:3px;
     border-radius:50%;
     animation:animateindice infinite 1.5s;
     & a img{
-        width:clamp(9rem,12dvw,14rem);
+        width:clamp(.9rem,10dvw,7rem);
     }
     & a{
         display:flex;
@@ -483,6 +484,15 @@ body{
     .div__caratula{
         margin-top:150px;
     }
+    .indice, .sombraindice{
+        font-size:clamp(7rem,8dvw,11rem);
+    }
+    .main-wrapper{
+        max-width:100%;
+    }
+    .a__liindice{
+        font-size:clamp(2rem,2.5rem,3rem);
+    }
     .thingsofindicesidebar{
         display:block;
     }
@@ -521,5 +531,8 @@ body{
     }
     div section{
         align-items:center;
+    }
+    .scrolltop a img{
+        width:clamp(9rem,12dvw,14rem);
     }
 }
