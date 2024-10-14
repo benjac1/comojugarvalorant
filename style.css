@@ -203,7 +203,6 @@ body{
     margin:70px 0;
     background:var(--rjo-c);
     & div h2{
-        user-select:none;
         color:var(--bc-c);
         font-size:clamp(.9rem,2dvw,3rem);
         text-align:center;
@@ -396,15 +395,26 @@ body{
         height:12px;
         width:100px;
         background:var(--ng-c);
+        transition:transform .5s, opacity .5s;
     }
 }
 .responsive__checkbox{
     display:none;
 }
-#responsive__checkbox:checked~.ulmenu__responsive{
+#responsive__checkbox:checked ~ .ulmenu__responsive{
     top:0;
 }
+.nav__responsive:has(input[type="checkbox"]:checked) .linea__responsive:first-child{
+    transform:rotate(45deg) translateY(23px) translateX(23px);
+}
+.nav__responsive:has(input[type="checkbox"]:checked) .linea__responsive:nth-child(2){
+    opacity:0;
+}
+.nav__responsive:has(input[type="checkbox"]:checked) .linea__responsive:last-child{
+    transform:rotate(-45deg) translateY(-23px) translateX(23px);
+}
 .ulmenu__responsive{
+    user-select:none;
     position:absolute;
     width:100%;
     background:var(--rjo-c);
