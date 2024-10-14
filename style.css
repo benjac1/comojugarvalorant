@@ -334,7 +334,7 @@ body{
     user-select:none;
     position:fixed;
     right:5px;
-    bottom:12dvh;
+    bottom:140px;
     background:var(--bc-c);
     width:max-content;
     padding:3px;
@@ -440,8 +440,8 @@ body{
     color:var(--rj-c);
     position:fixed;
     font-size:clamp(1.3rem,7dvw,6rem);
-    right:0;
-    bottom:0;
+    right:10px;
+    bottom:10px;
 }
 
 .h1boost{
@@ -462,7 +462,7 @@ body{
 }
 .aside-indice label{
     user-select:none;
-    font-size:clamp(8rem,7dvw,12rem);
+    font-size:clamp(12rem,11dvw,16rem);
     background:var(--rj-c);
     border-radius:50%;
     border:4px solid var(--ng-c);
@@ -491,7 +491,7 @@ body{
         max-width:100%;
     }
     .a__liindice{
-        font-size:clamp(2rem,2.5rem,3rem);
+        font-size:clamp(4rem,6rem,8rem);
     }
     .thingsofindicesidebar{
         display:block;
@@ -505,14 +505,14 @@ body{
         display:flex;
         top:150px;
         position:fixed;
-        left:-640px;
+        left:-1160px;
         z-index:1000;
         align-items:center;
         gap:1dvw;
+        width:60dvw;
     }
     .div__seccion{
         animation-timeline:none;
-        width:600px;
     }
     .header{
         display:none;
@@ -533,6 +533,6 @@ body{
         align-items:center;
     }
     .scrolltop a img{
-        width:clamp(9rem,12dvw,14rem);
+        width:clamp(13rem,16dvw,18rem);
     }
 }
