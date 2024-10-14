@@ -409,7 +409,7 @@ body{
     width:100%;
     background:var(--rjo-c);
     height:100dvh;
-    top:-2600px;
+    top:-2800px;
     transition:top 0.5s;
     & .divcenter__responsive{
         width:100%;
