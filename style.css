@@ -505,7 +505,7 @@ body{
         display:flex;
         top:150px;
         position:fixed;
-        left:-1160px;
+        left:-800px;
         z-index:1000;
         align-items:center;
         gap:1dvw;
