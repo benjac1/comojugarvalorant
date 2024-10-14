@@ -110,7 +110,7 @@ body{
         border-radius:17px;
         object-fit:content;
         width:clamp(20dvw,50%,50dvw);height:clamp(20dvh,100%,50dvh);
-        transform:translateY(2dvh)
+        transform:translateY(2dvh);
     }
     & div{
         display:flex;
@@ -119,11 +119,11 @@ body{
         text-align:center;
         padding:10px;
         & h2{
-            font-size:clamp(.9rem,2dvw,3rem);
+            font-size:clamp(1.3rem,2.5dvw,5rem);
             color:var(--amrl-c);
         }
         & p{
-            font-size:clamp(.9rem,1.5dvw,2rem);
+            font-size:clamp(1.2rem,2dvw,4rem);
         }
     }
 }
@@ -337,10 +337,10 @@ body{
     background:var(--bc-c);
     width:max-content;
     padding:3px;
-    border-radius:100%;
+    border-radius:50%;
     animation:animateindice infinite 1.5s;
     & a img{
-        width:clamp(70px,10dvw,100px);
+        width:clamp(7rem,10dvw,12rem);
     }
     & a{
         display:flex;
@@ -435,10 +435,10 @@ body{
 
 .aviso{
     background:var(--bc-c);
-    border-radius:17px;
+    border-radius:1dvw;
     color:var(--rj-c);
     position:fixed;
-    font-size:clamp(.9rem,5dvw,4rem);
+    font-size:clamp(1.3rem,7dvw,6rem);
     right:0;
     bottom:0;
 }
@@ -461,7 +461,7 @@ body{
 }
 .aside-indice label{
     user-select:none;
-    font-size:4rem;
+    font-size:clamp(6rem,5dvw,10rem);
     background:var(--rj-c);
     border-radius:50%;
     border:4px solid var(--ng-c);
