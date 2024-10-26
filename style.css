@@ -491,6 +491,9 @@ body{
     font-family:'Protest Riot';
     color:var(--rj-c);
 }
+.activepage{
+    border-bottom:2px solid var(--vd-c);
+}
 
 
 @media (max-width:1165px){
