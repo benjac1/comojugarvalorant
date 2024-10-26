@@ -339,16 +339,14 @@ body{
     right:5px;
     bottom:140px;
     background:var(--bc-c);
-    width:max-content;
     padding:3px;
     border-radius:50%;
-    animation:animateindice infinite 1.5s;
+    border:10px solid var(--ng-c);
     animation:reveal 1s 1.2s linear both;
-    & a img{
-        width:clamp(.9rem,10dvw,7rem);
-    }
     & a{
-        display:flex;
+        font-size:clamp(12rem,5dvw,16rem);
+        text-decoration:none;
+        color:var(--ng-c);
     }
     &:hover{
         background:var(--vd-c);
@@ -469,7 +467,7 @@ body{
     font-size:clamp(12rem,11dvw,16rem);
     background:var(--rj-c);
     border-radius:50%;
-    border:4px solid var(--ng-c);
+    border:10px solid var(--ng-c);
     transition:rotate .5s;
     animation:reveal 1s 1.2s linear both;
 }
