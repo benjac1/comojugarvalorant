@@ -156,10 +156,10 @@ body{
     align-items:center;
     flex-direction:column;
     padding:60px;
-    background:url(caratula1.jpg);
+    background:url(caratula.jpg);
     background-position:center;
     background-repeat:no-repeat;
-    height:100%;
+    background-size:cover;
     & h2{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
