@@ -156,7 +156,7 @@ body{
     align-items:center;
     flex-direction:column;
     padding:60px;
-    background:url(caratula.png);
+    background:url(caratula.webp);
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
@@ -486,8 +486,9 @@ body{
     font-family:'Protest Riot';
     color:var(--rj-c);
 }
-.activepage{
-    border-bottom:2px solid var(--vd-c);
+.activepage::before{
+    content:'\25b6';
+    color:var(--vd-c);
 }
 
 
