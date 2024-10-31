@@ -333,15 +333,14 @@ body{
     z-index:10000;
     user-select:none;
     position:fixed;
-    right:5px;
-    bottom:140px;
+    left:5px;
+    bottom:10px;
     background:var(--bc-c);
-    padding:3px;
     border-radius:50%;
     border:10px solid var(--ng-c);
     animation:reveal 1s .5s linear both;
     & a{
-        font-size:clamp(12rem,5dvw,16rem);
+        font-size:5rem;
         text-decoration:none;
         color:var(--ng-c);
     }
@@ -459,7 +458,7 @@ body{
 }
 .aside-indice label{
     user-select:none;
-    font-size:clamp(12rem,11dvw,16rem);
+    font-size:clamp(7rem,2dvw,12rem);
     background:var(--rj-c);
     border-radius:50%;
     border:10px solid var(--ng-c);
