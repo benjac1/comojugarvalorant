@@ -35,7 +35,7 @@ html{
     }
 }
 body{
-    background:url(fondo.jpg);
+    background:url(fondo.webp);
     font-family:sans-serif;
     background-size:cover;
     width:100%;height:100%;
@@ -166,7 +166,7 @@ body{
         user-select:none;
         text-align:center;
         font-size:clamp(1.4rem,17dvw,12rem);
-        background:url(radiant.png);
+        background:url(radiant.webp);
         background-size:auto;
         -webkit-text-stroke:2px;
         -webkit-text-fill-color:transparent;
@@ -493,14 +493,8 @@ body{
 
 
 @media (max-width:1165px){
-    .indice, .sombraindice{
-        font-size:clamp(7rem,8dvw,11rem);
-    }
     .main-wrapper{
         max-width:100%;
-    }
-    .a__liindice{
-        font-size:clamp(2rem,4rem,6rem);
     }
     .thingsofindicesidebar{
         display:block;
@@ -514,7 +508,7 @@ body{
         display:flex;
         top:150px;
         position:fixed;
-        left:-850px;
+        left:-430px;
         z-index:1000;
         align-items:center;
         gap:1dvw;
@@ -540,8 +534,5 @@ body{
     }
     div section{
         align-items:center;
-    }
-    .scrolltop a img{
-        width:clamp(13rem,16dvw,18rem);
     }
 }
