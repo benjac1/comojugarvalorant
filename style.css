@@ -483,7 +483,6 @@ body{
     }
     .aside-indice{
         height:70dvh;
-        transition:left .5s;
         display:flex;
         top:150px;
         position:fixed;
