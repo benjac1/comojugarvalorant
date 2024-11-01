@@ -157,6 +157,7 @@ body{
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
+    font-display:initial;
     & h2{
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
@@ -442,7 +443,6 @@ body{
     background:var(--rj-c);
     border-radius:50%;
     border:7px solid var(--ng-c);
-    transition:rotate .5s;
     animation:reveal 1s .5s linear both;
 }
 .thingsofindicesidebar{
