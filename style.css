@@ -368,7 +368,6 @@ body{
         height:12px;
         width:70px;
         background:var(--ng-c);
-        transition:transform .5s, opacity .5s;
     }
 }
 .responsive__checkbox{
@@ -393,7 +392,6 @@ body{
     background:var(--rjo-c);
     height:100dvh;
     top:-2800px;
-    transition:top 0.5s;
     & .divcenter__responsive{
         width:100%;
         height:100%;
