@@ -170,7 +170,6 @@ body{
         -webkit-background-clip:text;
     }
     & p{
-        -webkit-text-stroke:1px var(--ng-c);
         color:var(--bc-c);
         font-size:clamp(1.4rem,4dvw,2rem);
         text-align:center;
@@ -318,9 +317,10 @@ body{
     bottom:10px;
     background:var(--bc-c);
     border-radius:50%;
-    border:10px solid var(--ng-c);
+    border:7px solid var(--ng-c);
     animation:reveal 1s .5s linear both;
     & a{
+        font-weight:1000;
         font-size:5rem;
         text-decoration:none;
         color:var(--ng-c);
@@ -437,10 +437,11 @@ body{
 }
 .aside-indice label{
     user-select:none;
-    font-size:clamp(7rem,2dvw,12rem);
+    font-size:6rem;
+    font-weight:1000;
     background:var(--rj-c);
     border-radius:50%;
-    border:10px solid var(--ng-c);
+    border:7px solid var(--ng-c);
     transition:rotate .5s;
     animation:reveal 1s .5s linear both;
 }
