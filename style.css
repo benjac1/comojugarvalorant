@@ -487,11 +487,7 @@ body{
         width:100dvw;
     }
     .thingsofindicesidebar{
-        
         display:block;
-    }
-    .caratula img{
-        filter:blur(10px)
     }
     .seccionind{
         padding:20px;
