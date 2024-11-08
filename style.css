@@ -43,6 +43,7 @@ body{
     background-attachment:fixed;
 }
 .main{
+    width:60dvw;
     padding:2dvw;
 }
 .parrafos{
@@ -91,12 +92,18 @@ body{
 
 .seccion{
     margin-bottom:100px;
-    width:100%;
     display:flex;
-    justify-content:space-between;
     border-bottom:2px solid var(--rj-c);
     border-top:2px solid var(--rj-c);
     background:var(--ngt-c);
+    padding:10px;
+    & picture{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        bottom:-25px;
+    }
     & img{
         view-timeline-name:--reveal-img;
         view-timeline-axis:block;
@@ -106,8 +113,7 @@ body{
         border-bottom:4px solid var(--rj-c);
         border-radius:17px;
         object-fit:content;
-        width:clamp(20dvw,50%,50dvw);height:clamp(20dvh,100%,50dvh);
-        transform:translateY(2dvh);
+        width:clamp(100px,30dvw,1000px);height:clamp(100px,30dvw,1000px);
     }
     & div{
         display:flex;
@@ -147,18 +153,20 @@ body{
 .divsection{
     width:90%;
 }
-.div__caratula{
+.caratula{
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    padding:60px;
-    background:url(caratula.webp);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:cover;
-    font-display:initial;
+    height:90dvh;
+    padding:clamp(30px,5dvw,100px);
+    & img{
+        width:100%;
+        position:absolute;
+        height:100%;
+    }
     & h2{
+        z-index:10;
         font-weight:500;
         font-family:"Black Ops One", sans-serif;
         user-select:none;
@@ -170,16 +178,19 @@ body{
         -webkit-text-fill-color:transparent;
         -webkit-background-clip:text;
     }
+    & p, h1{
+        max-width:1024px;
+        z-index:10;
+        text-align:center;
+        user-select:none;
+    }
     & p{
         color:var(--bc-c);
         font-size:clamp(1.4rem,4dvw,2rem);
-        text-align:center;
     }
     & h1{
         color:var(--vd-c);
-        user-select:none;
         font-size:clamp(1.4rem,5dvw,3rem);
-        text-align:center;
     }
 }
 @keyframes reveal{
@@ -205,6 +216,7 @@ body{
 .main-wrapper{
     display:flex;
     margin-bottom:100px;
+    justify-content:center;
 }
 .indice, .sombraindice{
     margin:0;
@@ -251,7 +263,7 @@ body{
 }
 .aside-indice{
     height:80dvh;
-    width:50dvw;
+    min-width:20%;
     margin-top:2dvh;
     position:sticky;
     top:110px;
@@ -470,11 +482,15 @@ body{
 
 
 @media (max-width:1165px){
-    .main-wrapper{
-        max-width:100%;
+    .main{
+        width:100dvw;
     }
     .thingsofindicesidebar{
+        
         display:block;
+    }
+    .caratula img{
+        filter:blur(10px)
     }
     .seccionind{
         padding:20px;
