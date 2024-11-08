@@ -10,6 +10,7 @@
     --azl-c:rgba(0,0,205,1);
 }
 *{
+    font-display:swap;
     margin:0;padding:0;
     box-sizing:border-box;
 }
