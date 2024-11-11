@@ -481,7 +481,6 @@ body{
     color:var(--vd-c);
 }
 
-
 @media (max-width:1165px){
     body{
         background-image:url(fondo-small.webp);
