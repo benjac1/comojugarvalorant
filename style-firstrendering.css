@@ -99,6 +99,3 @@
     z-index:10000;
     animation:reveal 1s .5s linear both;
 }
-@font-face{
-    font-display:swap;
-}
