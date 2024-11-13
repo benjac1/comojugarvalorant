@@ -1,0 +1,101 @@
+
+.caratula{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:90dvh;
+    padding:clamp(30px,5dvw,100px);
+    & img{
+        width:100%;
+        position:absolute;
+        height:100%;
+    }
+    & h2{
+        z-index:10;
+        font-weight:500;
+        font-family:"Black Ops One", sans-serif;
+        user-select:none;
+        text-align:center;
+        font-size:clamp(1.4rem,17dvw,12rem);
+        background:url(radiant.webp);
+        background-size:auto;
+        -webkit-text-stroke:2px;
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;
+    }
+    & p, h1{
+        max-width:1024px;
+        z-index:10;
+        text-align:center;
+        user-select:none;
+    }
+    & p{
+        color:var(--bc-c);
+        font-size:clamp(1.4rem,4dvw,2rem);
+    }
+    & h1{
+        color:var(--vd-c);
+        font-size:clamp(1.4rem,5dvw,3rem);
+    }
+}
+.progressBar{
+    z-index:10000000;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:7px;
+    background:var(--vd-c);
+    animation:grow-progressBar auto linear;
+    animation-timeline:--page-scroll;
+    transform-origin:0 50%;
+}
+.header{
+    display:flex;
+    justify-content:center;align-items:center;
+    z-index:1000;
+    width:100%;height:70px;
+    background:var(--rj-c);
+    position:sticky;
+    top:0;
+}
+.header__responsive{
+    z-index:1000;
+    display:none;
+    position:sticky;
+    top:0;
+    width:100%;
+    background:var(--rj-c);
+    height:100px;
+    justify-content:center;
+    align-items:center;
+}
+.scrolltop{
+    z-index:10000;
+    user-select:none;
+    position:fixed;
+    left:5px;
+    bottom:10px;
+    background:var(--bc-c);
+    border-radius:50%;
+    border:7px solid var(--ng-c);
+    animation:reveal 1s .5s linear both;
+    & a{
+        font-weight:1000;
+        font-size:5rem;
+        text-decoration:none;
+        color:var(--ng-c);
+    }
+    &:hover{
+        background:var(--vd-c);
+    }
+}
+.aviso{
+    background:var(--bc-c);
+    color:var(--rj-c);
+    position:fixed;
+    font-size:clamp(.5rem,7dvw,2rem);
+    right:10px;
+    bottom:10px;
+    z-index:10000;
+    animation:reveal 1s .5s linear both;
+}
