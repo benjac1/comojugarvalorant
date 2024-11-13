@@ -30,6 +30,10 @@
         text-align:center;
         user-select:none;
     }
+    & p{
+        color:var(--bc-c);
+        font-size:clamp(1.4rem,4dvw,2rem);
+    }
     & h1{
         color:var(--vd-c);
         font-size:clamp(1.4rem,5dvw,3rem);
