@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family:;
+    font-display:swap;
+}
 .caratula{
     display:flex;
     justify-content:center;
