@@ -4,7 +4,7 @@
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    height:90dvh;
+    height:90%;
     padding:clamp(30px,5dvw,100px);
     & img{
         width:100%;
